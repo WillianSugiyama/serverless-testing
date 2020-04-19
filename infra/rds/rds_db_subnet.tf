@@ -1,4 +1,4 @@
 resource "aws_db_subnet_group" "rds-private-subnet" {
-    name = "rds-private-subnet-group",
-    subnet_ids = ["${var.rds_subnet1}", "${var.rds_subnet2}"]
+  name       = "rds-private-subnet-group"
+  subnet_ids = ["${aws_subnet.subnet-public-1.id}", "${aws_subnet.subnet-public-2.id}"]
 }
